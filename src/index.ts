@@ -33,7 +33,7 @@ async function makeApiRequest<T>(
   try {
     const { url, method, data } = options
 
-    const response = await fetch(process.env.API_URL + url, {
+    const response = await fetch(process.env.REACT_APP_API_URL + url, {
       method,
       headers: {
         'Content-Type': 'application/json',
