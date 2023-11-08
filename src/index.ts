@@ -33,7 +33,7 @@ async function makeApiRequest<T>(
   try {
     const { url, method, data } = options
 
-    const response = await fetch('http://localhost:4000/api/v3' + url, {
+    const response = await fetch(process.env.API_URL + url, {
       method,
       headers: {
         'Content-Type': 'application/json',
