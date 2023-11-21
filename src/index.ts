@@ -32,7 +32,7 @@ async function makeApiRequest<T>(
 ): Promise<ApiResponse<T>> {
   try {
     const { url, method, data } = options
-    console.log(url)
+    console.log(process.env.REACT_APP_HTTP_SERVER_URL)
     const response = await fetch(process.env.REACT_APP_HTTP_SERVER_URL + url, {
       method,
       headers: {
