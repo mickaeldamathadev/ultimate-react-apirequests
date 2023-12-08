@@ -73,6 +73,10 @@ function generateNestedUrl<T>(
   return nestedUrl
 }
 
+/**
+   process.env.REACT_APP_HTTP_SERVER_URL
+ */
+
 async function post<T>(
   baseUrl: string,
   nestedRoutes: NestedRoutes<T>,
@@ -81,6 +85,10 @@ async function post<T>(
   const url = generateNestedUrl(baseUrl, nestedRoutes)
   return await makeApiRequest<T>({ url, method: 'POST', data })
 }
+
+/**
+   process.env.REACT_APP_HTTP_SERVER_URL
+ */
 
 async function put<T>(
   baseUrl: string,
@@ -91,6 +99,10 @@ async function put<T>(
   return await makeApiRequest<T>({ url, method: 'PUT', data })
 }
 
+/**
+   process.env.REACT_APP_HTTP_SERVER_URL
+ */
+
 async function patch<T>(
   baseUrl: string,
   nestedRoutes: NestedRoutes<T>,
@@ -100,6 +112,10 @@ async function patch<T>(
   return await makeApiRequest<T>({ url, method: 'PATCH', data })
 }
 
+/**
+   process.env.REACT_APP_HTTP_SERVER_URL
+ */
+
 async function get<T>(
   baseUrl: string,
   nestedRoutes: NestedRoutes<T> = {},
@@ -107,6 +123,10 @@ async function get<T>(
   const url = generateNestedUrl(baseUrl, nestedRoutes)
   return await makeApiRequest<T>({ url, method: 'GET' })
 }
+
+/**
+   process.env.REACT_APP_HTTP_SERVER_URL
+ */
 
 async function del<T>(
   baseUrl: string,
